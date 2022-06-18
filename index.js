@@ -53,17 +53,6 @@ let wagesEarnedOnDate = dateExpected => {
     return parseFloat(baseWages.toString())
 }
 
-let findEmployeeByFirstName = (srcArray, firstName) =>{
-  return srcArray.find(rec => {
-    return rec.firstName === firstName
-  })
-}
-
-let calculatePayroll = arrayOfEmployeeRecords => {
-    return arrayOfEmployeeRecords.reduce((memo, rec) => {
-        return memo + allWagesFor.call(rec)
-    }, 0)
-}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
@@ -86,3 +75,14 @@ const allWagesFor = function () {
     return payable
 }
 
+let findEmployeeByFirstName = (srcArray, firstName) =>{
+  return srcArray.find(rec => {
+    return rec.firstName === firstName
+  })
+}
+
+let calculatePayroll = arrayOfEmployeeRecords => {
+    return arrayOfEmployeeRecords.reduce((memo, rec) => {
+        return memo + allWagesFor.call(rec)
+    }, 0)
+}
